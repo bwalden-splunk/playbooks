@@ -5,8 +5,16 @@
     "coa": {
         "data": {
             "description": "",
-            "edges": [],
-            "hash": "34f214649e27c33ea22c0dd6363172679b9d6dd0",
+            "edges": [
+                {
+                    "id": "port_0_to_port_2",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                }
+            ],
+            "hash": "f2d1512e7a47f1772d75f264ff9b25c16d0d539d",
             "nodes": {
                 "0": {
                     "data": {
@@ -22,7 +30,7 @@
                     "type": "start",
                     "warnings": {},
                     "x": 1000,
-                    "y": 419.9999999999999
+                    "y": 419.9999999999998
                 },
                 "1": {
                     "data": {
@@ -39,6 +47,40 @@
                     "warnings": {},
                     "x": 1000,
                     "y": 1000
+                },
+                "2": {
+                    "data": {
+                        "action": "url reputation",
+                        "actionType": "investigate",
+                        "advanced": {
+                            "join": []
+                        },
+                        "connector": "PhishTank",
+                        "connectorConfigs": [
+                            "phishtank"
+                        ],
+                        "connectorId": "c193026d-46cf-4f17-b4b9-f22525d2d87e",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "url_reputation_1",
+                        "id": "2",
+                        "parameters": {
+                            "url": "artifact:*.cef.requestURL"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "url"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 980,
+                    "y": 544.5
                 }
             },
             "notes": ""
@@ -50,7 +92,7 @@
         "schema": "5.0.10",
         "version": "6.0.1.123902"
     },
-    "create_time": "2023-11-14T17:51:34.654974+00:00",
+    "create_time": "2023-11-14T18:07:43.505476+00:00",
     "draft_mode": false,
     "labels": [
         "*"
